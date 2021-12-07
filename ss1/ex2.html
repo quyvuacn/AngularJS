@@ -18,11 +18,6 @@
     <script>
         var app = angular.module('myApp', []);
         app.controller('myController', function ($scope){
-            /* Thiết lập các giá trị ban đầu cho các biến,
-                 khi chạy phần view sẽ hiển thị giá trị này
-                 Sau khi người dùng nhập giá trị mới, phần View sẽ nhờ qua controller để gửi tới model, model sẽ cập nhật
-                 và thông qua controller để phần View hiển thị giá trị mới của biến
-            */
             $scope.firstName = 'Dinh';
             $scope.lastName = 'Quang Anh';
         });
