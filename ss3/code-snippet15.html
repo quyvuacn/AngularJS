@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Snippet15 SS3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-app>
+    <h1>AngularJS Uppercase and Lowercase Filter</h1>
+    <div ng-init="person.firstName='James';person.lastName='Bond'">
+        Lower Case: {{person.firstName + ' ' + person.lastName | lowercase}} <br>
+        Upper Case: {{person.firstName + ' ' + person.lastName | uppercase}}
+    </div>
+
+    Filter Lowercase và Uppercase.
+    Để chuyển một string từ dạng chữ hoa sang chữ thường chúng ta sử dụng lowercase filer,
+    ngược lại chúng ta sử dụng uppercase filter.
+
+</body>
+</html>

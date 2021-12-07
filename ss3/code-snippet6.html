@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Snippet6 SS3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style>
+        div {
+            border: 1px solid green;
+            width: 100%;
+            height: 50px;
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body ng-app ng-init="owners=['Bill', 'Steve', 'Jack']">
+    <ol>
+        <li ng-repeat="name in owners">
+            {{name}}
+        </li>
+    </ol>
+
+    <div ng-repeat="name in owners">
+        {{name}}
+    </div>
+
+<!--    Bài này học về ng-repeat, em có chú thích ở code-snippet1 rồi nên em không viết lại nữa ạ-->
+
+</body>
+</html>

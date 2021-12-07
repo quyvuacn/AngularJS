@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Snippet4 SS3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app ng-init="greet='Hello'; amount=100; myArr=[200, 300];
+        persion = {firstName: 'Bill', lastName: 'Gate'}">
+        {{greet}}
+        {{persion.firstName}} <br>
+        {{amount}}<br>
+        {{myArr[1]}}
+    </div>
+
+<!--    Directive ng-init có thể khởi tạo được cả các dữ liệu có data type là Array và Number chứ không chỉ với các dữ liệu -->
+<!--        có data type là string. Còn về định nghĩa ng-init thì trong code-snippet1 ta đã học rồi -->
+
+</body>
+</html>

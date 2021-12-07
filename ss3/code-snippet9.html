@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Snippet9 SS3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-app="spApp">
+    <h1>ng-include directive</h1>
+    <div ng-controller="SPController" class="container">
+        <div ng-include="'mainContent.html'"></div>
+        <div ng-include="'sideBar.html'"></div>
+    </div>
+
+    <script>
+        var MyApp = angular.module('spApp', []);
+        MyApp.controller('SPController', function ($scope){
+           $scope.quantity = 1;
+           $scope.price = 9.99;
+        });
+    </script>
+
+<!--    Bài này ta học cách sử dụng ng-include directive để nhúng (embed) file mainContent.html và file sideBar.html vào -->
+<!--        application. Em đã tạo 2 file mainContent.html và sideBar.html tương ứng với các code snippet 10 và 11 ở trong sách-->
+<!--            Khi chạy cái code snippet9 này, thì nội dung của 2 file html được nhúng vào sẽ hiển thị ở đây luôn ạ-->
+</body>
+</html>

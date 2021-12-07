@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Handling</title>
+</head>
+<body ng-app="EventApp">
+
+<!--    Đoạn code ở bài này bao gồm phần two ways data-binding đã học để người dùng nhập dữ liệu, nhưng có thêm -->
+<!--    sự kiện click = "calc" (khi người dùng click chuột vào button) để thực hiện các thao tác, cụ thể ở đây là nhân 2 dữ liệu người dùng nhập vào để đưa ra kết quả-->
+<!--    và hiển thị ở phần view-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <h1> Event</h1>
+    <div ng-controller="eventcontroller">
+        New Members: <input type="text" ng-model="quantity" id="quantity" ng-keypress="total=''">
+        <br>
+        <br>
+        Registration Fees: <input type="text" ng-model="fees" id="fees" >
+        <input type ="button" value ="Calculate" ng-click ="Calc()" />
+        <br>
+        <br>
+        <b>Total Amount<b>: {{total}}</b></b>
+    </div>
+    <script>
+        var app = angular.module('EventApp', []);
+        app.controller('eventcontroller', function($scope){
+            $scope.quantity = 0;
+            $scope.fees = 0;
+            $scope.total = "";
+            $scope.Calc = function (){
+                if ($scope.quantity > 0 && $scope.fees > 0){
+                    $scope.total = $scope.quantity * $scope.fees;
+                }else {
+                    $scope.total = "Invalid Input";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

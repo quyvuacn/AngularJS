@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Snippet 6 SS2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-controller="myController">
+    <div>
+        <h3>Please enter your name here.</h3>
+        Name:
+
+<!--            Bước cuối cùng, thêm attribute "ng-model". Như ở dòng code dưới, attribute này có value là "name",-->
+<!--            do đó khi người dùng nhập tên theo input, thì những gì người dùng nhập sẽ được lưu vào biến name. Khi đó-->
+<!--            $scope.name có giá trị là chuỗi mà người dùng vừa nhập, nó sẽ hiển thị cho người dùng thấy-->
+
+        <input type="text" ng-model="name" placeholder="Enter your name...">
+        <p>
+            Hello! <strong>{{name}}</strong>
+        </p>
+        <p>Welcome to AngularJS.</p>
+    </div>
+
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myController', function ($scope){
+            $scope.name = " ";
+        });
+    </script>
+</body>
+</html>

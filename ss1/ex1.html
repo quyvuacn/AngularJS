@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ví Dụ 1 SS1</title>
+    /* liên kết tới file gốc angular.min.js để sử dụng được angularjs */
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    /* Sử dụng angularjs với thẻ div này */
+    <div ng-app="costApp" ng-controller="CostController">
+        <b>Bill:</b>
+        <div>
+            Quantity:
+            <input type="number" min="0" ng-model="qty" required>
+        </div>
+        <div>
+            Cost:
+            <input type="number" min="0" ng-model="cost" required>
+        </div>
+        <div>
+            <b>Total:</b>
+            <span>
+                {{total | currency: ' $ ' }}
+            </span>
+            <button class="btn" ng-click="pay()">Pay</button>
+        </div>
+
+        <script>
+            var app = angular.module('costApp', []); <!-- đây là module -->
+            // dưới đây là controller
+            app.controller('CostController', function ($scope){
+                $scope.qty = 0;
+                $scope.cost = 0;
+                $scope.total = 0;
+                $scope.pay = function (){
+                    this.total = this.cost * this.qty;
+                };
+            });
+        </script>
+    </div>
+</body>
+</html>
